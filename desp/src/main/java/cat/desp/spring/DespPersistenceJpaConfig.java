@@ -21,8 +21,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({ "cat.desp.persistence" })
-@PropertySource({ "classpath:persistence-${persistenceTarget:mysql}.properties" })
 @EnableJpaRepositories(basePackages = "cat.desp.persistence.dao")
+@PropertySource({"classpath:persistence-${persistenceBD:mysql}-${persistenceTarget:local}.properties"})
 public class DespPersistenceJpaConfig {
 	@Autowired
     private Environment env;

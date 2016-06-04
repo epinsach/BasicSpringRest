@@ -2,16 +2,6 @@ package cat.desp.persistence.setup;
 
 import java.util.Set;
 
-import cat.desp.common.spring.util.Profiles;
-import cat.desp.persistence.model.Principal;
-import cat.desp.persistence.model.Privilege;
-import cat.desp.persistence.model.Role;
-import cat.desp.service.IPrincipalService;
-import cat.desp.service.IPrivilegeService;
-import cat.desp.service.IRoleService;
-import cat.desp.util.Desp;
-import cat.desp.util.Desp.Privileges;
-import cat.desp.util.Desp.Roles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +12,17 @@ import org.springframework.stereotype.Component;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
+
+import cat.desp.common.spring.util.Profiles;
+import cat.desp.persistence.model.Principal;
+import cat.desp.persistence.model.Privilege;
+import cat.desp.persistence.model.Role;
+import cat.desp.service.IPrincipalService;
+import cat.desp.service.IPrivilegeService;
+import cat.desp.service.IRoleService;
+import cat.desp.util.Desp;
+import cat.desp.util.Desp.Privileges;
+import cat.desp.util.Desp.Roles;
 
 /**
  * This simple setup class will run during the bootstrap process of Spring and will create some setup data <br>
